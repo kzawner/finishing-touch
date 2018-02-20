@@ -1,0 +1,12 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+shopresurs.ru	TRUE	/	FALSE	1999999999	rekl	deleted
+shopresurs.ru	TRUE	/	FALSE	1999999999	ref	8
+shopresurs.ru	TRUE	/	FALSE	1999999999	product_id	1603
+shopresurs.ru	TRUE	/	FALSE	1999999999	ipp_uid2	XmJ3qltIOwS1lKju/RhL2W864cWMbvnmDQfDG+A==
+shopresurs.ru	TRUE	/	FALSE	1999999999	ipp_uid1	1519140704546
+shopresurs.ru	TRUE	/	FALSE	1999999999	rerf	AAAAAFqMP2AwJmX9A2a0Ag==
+best-gooods.ru	TRUE	/	FALSE	1999999999	ipp_uid2	NWdawPMrSEeQAqu2/xEBP/Fhm8RVeSk3rFOcP+g==
+best-gooods.ru	TRUE	/	FALSE	1999999999	ipp_uid1	1519140719503
+best-gooods.ru	TRUE	/	FALSE	1999999999	rerf	AAAAAFqMP287zMihAxQ0Ag==
+
