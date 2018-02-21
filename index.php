@@ -15,9 +15,13 @@
   <link rel="stylesheet" type="text/css" href="images/roboto.css">
   <link media="all" href="images/main.css" rel="stylesheet" type="text/css" />
 
-  <script src="images/jquery.js" type="text/javascript"></script>
+  <!--<script src="images/jquery.js" type="text/javascript"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="images/plugins.js" type="text/javascript"></script>
 
+  <?php
+  //include __DIR__ . '/include/all_codes.php';
+  ?>
 </head>
 
 <body>
@@ -40,8 +44,9 @@
       </div>
       <form action="order-success.php" method="post" onsubmit="if(this.name.value==''){alert('Введите Ваше имя');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона');return false}return true;">
         <div><input type="text" name="name" placeholder="Введите Ф.И.О" required=""></div>
-        <div><input type="text" name="phone" placeholder="Введите телефон" required=""></div>
+        <div><input type="text" name="phone" placeholder="Введите телефон" autocomplete="tel-national" required=""></div>
         <div class="center"><button class="button-form"></button></div>
+        <div style="display:none;"><input type="text" name="product_name" class="product-name"></div>
       </form>
     </div>
     <div class="section block-3 blue-bg">
@@ -138,6 +143,7 @@
       <form action="order-success.php" method="post" onsubmit="if(this.name.value==''){alert('Введите Ваше имя');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона');return false}return true;">
         <div><input type="text" name="name" placeholder="Введите Ф.И.О" required=""></div>
         <div><input type="text" name="phone" placeholder="Введите телефон" required=""></div>
+        <div style="display:none;"><input type="text" name="product_name" class="product-name"></div>
         <div class="center"><button class="button-form"></button></div>
       </form>
     </div>
@@ -150,12 +156,28 @@
   </div>
 
 
-  <script src="images/previewyoutube.js"></script>
+<script>
+// ask politely form.js to load even if not from root path of the url.
+(function () {
+  var getUrl = window.location;
+  var baseUrl = getUrl .protocol + "//" + getUrl.host + "/";
+  Object.defineProperty(document, "referrer", {get : function(){ return baseUrl; }});
+  console.debug(`document referrer set to $baseUrl`);
+})();
 
-  <script type="text/javascript" src="images/jquery.placeholder.js"></script>
-  <script type="text/javascript" src="images/slick.min.js"></script>
-  <script type="text/javascript" src="images/init.js"></script>
-  <script src="images/count.js"></script>
+// set product name in the order form to the current url and page title.
+(function () {
+  $('.product-name').val(document.title + " (" + window.location.href + ")");
+})();
+</script>
+<script src="https://b24go.com/form/v3/b24-iunab6.bitrix24.ru/form.js"></script>
+<script src="success-page.js"></script>
+
+<script src="images/previewyoutube.js"></script>
+<script type="text/javascript" src="images/jquery.placeholder.js"></script>
+<script type="text/javascript" src="images/slick.min.js"></script>
+<script type="text/javascript" src="images/init.js"></script>
+<script src="images/count.js"></script>
 
 
 </body>

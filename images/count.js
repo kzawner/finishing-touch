@@ -55,6 +55,6 @@ function CountBox() {
             setTimeout("CountBox()", 1e3)
         }
     }
-    window.onload = function () {
-        CountBox()
-    }
+$(function() {
+  CountBox()
+});
